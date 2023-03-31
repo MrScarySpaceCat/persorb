@@ -1,5 +1,5 @@
 # Persorb
-Persorb is a simple speech to text and then text to speech program. It uses the OpenAI Wisper to convert speech to text and then the TTS library to convert that text into speech. It then uses the PyGame library to transmit the audio to the speakers.
+Persorb is a simple speech to text and then text to speech program. It uses the OpenAI Wisper to convert speech to text and then the TTS library to convert that text into speech. It then uses the PyGame library to transmit the audio to the default microphone.
 
 ## Installation
 To install Persorb, you need to install the following libraries:
