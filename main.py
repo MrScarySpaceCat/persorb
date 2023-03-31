@@ -35,7 +35,7 @@ while True:
                 mixer.music.unload()
 
     except sr.RequestError as e:
-        print("Could not request results; {0}".format(e))
+        print(f"Could not request results: {e}")
 
     except sr.UnknownValueError:
         print("unknown error occurred")
