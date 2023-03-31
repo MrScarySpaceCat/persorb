@@ -7,36 +7,16 @@ import time
 
 print(sr.Microphone.list_microphone_names())
 
-# Initialize the recognizer
 r = sr.Recognizer()
-
-# initialize class to convert text to speech
 tts = TTS('tts_models/en/ljspeech/tacotron2-DCA', gpu=False)
-
-# initialize the mixer
 mixer.init(devicename="CABLE Input (VB-Audio Virtual Cable)")
 
-
-# Loop infinitely for user to speak
-
 while True:
-
-    # Exception handling to handle
-    # exceptions at the runtime
     try:
-
-        # use the microphone as source for input.
         with sr.Microphone() as source2:
-
-            # wait for a second to let the recognizer
-            # adjust the energy threshold based on
-            # the surrounding noise level
             r.adjust_for_ambient_noise(source2, duration=0.2)
-
-            # listens for the user's input
             audio2 = r.listen(source2)
 
-            # Using google to recognize audio
             MyText = r.recognize_whisper(audio2, language="english")
             MyText = MyText.lower()
 
